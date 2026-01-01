@@ -1,0 +1,34 @@
+---
+const categories = [
+  "general",
+  "gaming",
+  "dev-notes",
+  "persian-guides",
+];
+---
+
+<aside class="sidebar">
+  <h3>Blog</h3>
+  <ul>
+    {categories.map(cat => (
+      <li>
+        <a href={`/blog/category/${cat}`}>{cat}</a>
+      </li>
+    ))}
+  </ul>
+</aside>
+
+<style>
+.sidebar {
+  width: 240px;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar li {
+  margin-bottom: 0.5rem;
+}
+</style>
